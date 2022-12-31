@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int s;
-    scanf("%d",&s);
-    int h=s/3600;
-    int m=(s-h*3600)/60;
-    s= s%60;
+    int h,m,s,n;
+    scanf("%d",&n);
+    h=n/3600;
+    m=(n%3600)/60;
+    s=(n-(3600*h)-(60*m));
     printf("H:M:S-%d:%d:%d",h,m,s);
 }
