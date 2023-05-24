@@ -1,16 +1,13 @@
 #include<stdio.h>
-int main()
-{
-    int number,reminder,large=0;
-    scanf("%d",&number);
-    while(number>0)
-    {
-        reminder=number%10;
-        if(large<reminder)
-        {
-            large=reminder;
+int main(){
+    int n,max=0;
+    scanf("%d",&n);
+    while(n!=0){
+        int r=n%10;
+        if(max<r){
+            max=r;
         }
-        number=number/10;
+        n=n/10;
     }
-    printf("%d",large);
+    printf("%d",max);
 }
