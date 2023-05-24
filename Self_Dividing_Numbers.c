@@ -1,26 +1,36 @@
 #include<stdio.h>
+int fun(int i)
+{
+    int r,p,c=0,v=0;
+    p=i;
+    while(i!=0)
+    {
+        r=i%10;
+        v++;
+        if(r!=0 && p%r==0)
+        {
+            c++;
+        }
+        i=i/10;
+    }
+    if(v==c)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
 int main()
 {
- int i,l,n,q,r,c=0,tc=0;
- scanf("%d%d",&l,&n);
- for(i=l;i<=n;i++)
- {
-     q=i;
-     c=0;
-     tc=0;
-     while(q!=0)
-     {
-         c++;
-         r=q%10;
-         if(r!=0 && i%r==0)
-         {
-             tc++;
-         }
-         q=q/10;
-     }
-     if(c==tc)
-     {
-         printf("%d ",i);
-     }
-  }
+    int l,u,i;
+    scanf("%d%d",&l,&u);
+    for(i=l;i<=u;i++)
+    {
+        if(fun(i))
+        {
+            printf("%d ",i);
+        }
+    }
 }
